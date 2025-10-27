@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+ 
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+   background-color: #fff9f9;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+  background: #fff9f9;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #1a2a4f;
+}
+
+.profile-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* LOGIN */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.login-card {
+  background: #fff9f9;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 370px;
+}
+
+.login-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.login-card p {
+  font-size: 14px;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+.login-card a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-card a:hover {
+  text-decoration: underline;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #3a3a3a64;
+  font-size: 15px;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #3a3a3a;
+  outline: none;
+  background-color: white;
+}
+
+.form-group input::placeholder {
+  color: #607085;
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #6b7587;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  background-color: #25384A;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #051731;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Profile Icon */
+.profile-icon {
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.profile-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon img:hover {
+  transform: scale(2.2);
+}

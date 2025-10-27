@@ -1,0 +1,301 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Match your logo height exactly */
+  background: #fff9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem; /* horizontal padding only */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #ddd;
+  z-index: 2000; /* raise it above everything */
+}
+
+.header .logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* nav links */
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  margin: 0 0.5rem;
+}
+.nav a:hover { color: #1a2a4f; }
+
+/* profile icon */
+.profile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-icon a {
+  display: flex;
+  align-items: center;
+}
+.profile-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+.profile-icon img:hover { transform: scale(1.1); }
+
+/* offset page content so it isn't hidden behind the fixed header */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff9f9;
+  color: #333;
+  padding-top: 120px;
+  /* slightly more than header height */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: #222;
+}
+
+.navbar a {
+  color: #eee;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.navbar a.active {
+  color: #ffd369;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.profile-card {
+  background: #fff9f9;
+  width: 380px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* HERO SECTION */
+/* HERO SECTION */
+.hero {
+  position: relative;
+  background: url('../images/image 47.png') center/cover no-repeat;
+  height: 70vh; /* adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 20, 40, 0.55); /* dark transparent overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 80px;
+  max-width: 700px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+
+.hero-content .subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  max-width: 550px;
+}
+
+
+/* OFFER SECTION */
+.offer-section {
+  position: relative;
+  background: url('../images/Group 125 (1).png') center/cover no-repeat;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.offer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 30, 50, 0.4); /* subtle dark overlay */
+}
+
+.offer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.offer-content h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.offer-content p {
+  font-size: 16px;
+  color: #f0f0f0;
+}
+
+
+/* SERVICE CARDS */
+/* SERVICES GRID SECTION */
+/* SERVICE CARDS - 2x2 Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 columns */
+  grid-template-rows: repeat(2, auto);   /* exactly 2 rows */
+  gap: 40px;                             /* spacing between cards */
+  padding: 60px 120px;                   /* space around grid */
+  background-color: #fff;
+  justify-items: center;                 /* center cards horizontally */
+  align-items: stretch;                  /* align evenly vertically */
+}
+
+.service-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 350px;                         /* adjust height as needed */
+  width: 100%;                           /* ensure uniform size */
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.873));
+  transition: background 0.3s ease;
+}
+
+.service-card:hover .overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.022), rgba(0, 0, 0, 0.082));
+}
+
+.service-card .text {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  right: 25px;
+  z-index: 2;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #eaeaea;
+  margin-bottom: 10px;
+}
+
+.see-more {
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.see-more:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
